@@ -27,3 +27,22 @@ Demonstrates the compiled spacing utility issue on TW4 beta.2
 
 8. Go to http://localhost/login and inspect the divs with "There should be spacing"
 
+
+## Additional Setup: example Apache VirtualHost for the Laravel "public" folder
+
+```apache
+<VirtualHost *:80>
+	ErrorLog     "/var/log/httpd/localhost-error_log"
+    CustomLog    "/var/log/httpd/localhost-access_log" common
+
+    # Path for static files
+    DocumentRoot "/srv/http/laravel/public"
+
+    DirectoryIndex index.php index.html
+    <Directory "/srv/http/laravel/public">
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
