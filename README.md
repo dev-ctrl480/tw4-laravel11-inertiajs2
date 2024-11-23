@@ -36,10 +36,10 @@ Demonstrates the compiled spacing utility issue on TW4 beta.2
     CustomLog    "/var/log/httpd/localhost-access_log" common
 
     # Path for static files
-    DocumentRoot "/srv/http/laravel/public"
+    DocumentRoot "/var/www/tw4-laravel11-inertiajs2/public"
 
     DirectoryIndex index.php index.html
-    <Directory "/srv/http/laravel/public">
+    <Directory "/var/www/tw4-laravel11-inertiajs2/public">
         Options -Indexes +FollowSymLinks
         AllowOverride All
         Require all granted
